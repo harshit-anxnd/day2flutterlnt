@@ -33,7 +33,16 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Colors.amber,
         title: Text(widget.title),
       ),
-      body: Text('you clicked the button 10 times'),
+      body: Center(child:
+      Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+//hey mr column, plz align your children in the center of your main axis
+        children: [
+          Text('you clicked the button 10 times'),
+          Text('0',style: TextStyle(fontSize: 20.0),),
+
+        ],
+      )),
     );
   }
 
