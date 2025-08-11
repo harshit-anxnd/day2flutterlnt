@@ -1,3 +1,4 @@
+import 'package:day2flutterlnt/Student.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -29,7 +30,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
 
   int _counter = 0; //juice
-
+Student flutterStudent = new Student("abdul", 123);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
