@@ -19,35 +19,41 @@ class MyApp extends StatelessWidget {
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
- final String title;
+
+  final String title;
+
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
+  int _counter = 0; //juice
+
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-      floatingActionButton: FloatingActionButton(child: Icon(Icons.add),onPressed: _incrementCounter,) ,
-      appBar: AppBar(
-        backgroundColor: Colors.amber,
-        title: Text(widget.title),
+    return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: _incrementCounter,
       ),
-      body: Center(child:
-      Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-//hey mr column, plz align your children in the center of your main axis
-        children: [
-          Text('you clicked the button 10 times'),
-          Text('0',style: TextStyle(fontSize: 20.0),),
-
-        ],
-      )),
+      appBar: AppBar(backgroundColor: Colors.amber, title: Text(widget.title)),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          //hey mr column, plz align your children in the center of your main axis
+          children: [
+            Text('you clicked the button 10 times'),
+            Text( '$_counter', style: TextStyle(fontSize: 20.0)),
+          ],
+        ),
+      ),
     );
   }
 
   void _incrementCounter() {
+    setState(() {
+      _counter++; //pouring juice
+    });
   }
 }
-
-
