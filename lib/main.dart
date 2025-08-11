@@ -45,6 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
             Text('you clicked the button 10 times'),
             Text( '$_counter', style: TextStyle(fontSize: 20.0)),
+
             Image.asset(
               'assets/images/my_image.jpeg',
               fit: BoxFit.cover,
